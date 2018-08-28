@@ -32,6 +32,11 @@ $(document).ready(function() {
 			document.getElementById('answer-2').innerHTML = ('нет');
 		}
 
+		function removeAnsver(){
+			document.getElementById('answer-1').remove();
+			document.getElementById('answer-2').remove();
+		}
+
 		chengeAnswer();
 		changeText();
 
@@ -49,7 +54,7 @@ $(document).ready(function() {
 
 		if (questions[0] == true) {
 			questionText = ('Вам больше нравится визуальная часть игры или интересно узнать о том , как в играх можно применять программирование?');
-			changeText()
+			changeText();
 			document.getElementById('answer-1').innerHTML = ('если код');
 			document.getElementById('answer-2').innerHTML = ('если визуалка');
 		}
@@ -62,6 +67,49 @@ $(document).ready(function() {
 
 		if (questions[0] == true && questions[1] == true && questions[2] == true) {
 			questionText = ('Ваша рабочая среда : C#');
+			changeText();
+			removeAnsver();
+		}
 
+		if (questions[0] == true && questions[1] == true && questions[2] == false) {
+			questionText = ('Ваша рабочая среда : Gamedev');
+			changeText();
+			removeAnsver();
+		}
+
+		if (questions[0] == true && questions[1] == false) {
+			questionText = ('Вы любите рисовать?');
+			changeText();
+		}
+
+		if (questions[0] == true && questions[1] == false && questions[2] == true) {
+			questionText = ('Вы бы выбрали рисовать на планшете или придумывать 3D-модэли в программе ?');
+			changeText();
+			document.getElementById('answer-1').innerHTML = ('3D');
+			document.getElementById('answer-2').innerHTML = ('Рисовать');
+		}
+
+		if (questions[0] == true && questions[1] == false && questions[2] == true && questions[3] == true) {
+			questionText = ('Вам больше тринадцати ?');
+			changeText();
+			chengeAnswer();
+		}
+
+		if (questions[0] == true && questions[1] == false && questions[2] == true && questions[3] == true && questions[4] == true) {
+			questionText = ('Ваша рабочая среда : 3D');
+			changeText();
+			removeAnsver();
+		}
+
+		if (questions[0] == true && questions[1] == false && questions[2] == false && questions[3] == true && questions[4] == false) {
+			questionText = ('Ваша рабочая среда : Gamedev');
+			changeText();
+			removeAnsver();
+		}
+
+		if (questions[0] == true && questions[1] == false && questions[2] == true && questions[3] == false) {
+			questionText = ('Ваша рабочая направление : концепт');
+			changeText();
+			removeAnswer();
 		}
 });

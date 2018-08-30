@@ -72,6 +72,7 @@ $(document).ready(function() {
 		if (questions[0] == true && questions[1] == false) {
 			questionText = ('Вы любите рисовать?');
 			changeText();
+			chengeAnswer();
 		}
 
 		if (questions[0] == true && questions[1] == false && questions[2] == true) {

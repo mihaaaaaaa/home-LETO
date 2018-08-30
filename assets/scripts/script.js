@@ -12,8 +12,7 @@ $(document).ready(function() {
 			'.3',
 			'.4',
 			'.5',
-			'.6',
-			'.7'
+			'.6'
 		];
 
 		function changeText(){
@@ -159,7 +158,7 @@ $(document).ready(function() {
 			document.getElementById('answer-2').innerHTML = ('Телефоны');
 		}
 
-		if (questions[0] == false && questions[1] == true && questions[2] == false) {
+		if (questions[0] == false && questions[1] == true && questions[2] == true) {
 			questionText = ('Ваша рабочая среда : Design');
 			changeText();
 			removeAnswer();
@@ -264,7 +263,7 @@ $(document).ready(function() {
 			removeAnswer();
 		}
 
-		if (questions[0] == false && questions[1] == false && questions[2] == true && questions[3] == false && questions[4] == true && questions[5] == true) {
+		if (questions[0] == false && questions[1] == false && questions[2] == true && questions[3] == false && questions[4] == true && questions[5] == false) {
 			questionText = ('Таблица говорит : Back');
 			changeText();
 			removeAnswer();

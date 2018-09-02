@@ -29,21 +29,7 @@ $(document).ready(function() {
 			document.getElementById('answer-2').remove();
 		}
 
-		chengeAnswer();
-		changeText();
-
-		$('.answer-1').click(function(){
-			questions[v] = true ;
-			alert(questions);
-			v = v + 1;
-		});
-
-		$('.answer-2').click(function(){
-			questions[v] = false;
-			alert(questions);
-			v = v + 1;
-		});
-
+		function checkText(){
 		if (questions[0] == true) {
 			questionText = ('Вам больше нравится визуальная часть игры или интересно узнать о том , как в играх можно применять программирование?');
 			changeText();
@@ -103,7 +89,12 @@ $(document).ready(function() {
 		if (questions[0] == true && questions[1] == false && questions[2] == true && questions[3] == false) {
 			questionText = ('Ваша рабочая направление : Концепт');
 			changeText();
-			removeAnswer();
+			removeAnsver();
+		}
+
+		if (questions[0] == true && questions[1] == false && questions[2] == false ) {
+			questionText = ('Вам нравится придумывать логические задачи?');
+			changeText();
 		}
 
 		if (questions[0] == true && questions[1] == false && questions[2] == false && questions[3] == true) {
@@ -119,25 +110,25 @@ $(document).ready(function() {
 		if (questions[0] == true && questions[1] == false && questions[2] == false && questions[3] == true && questions[4] == true) {
 			questionText = ('Ваша рабочая среда : Lvl');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == true && questions[1] == false && questions[2] == false && questions[3] == true && questions[4] == false) {
 			questionText = ('Ваша рабочая среда : Gamedev');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == true && questions[1] == false && questions[2] == false && questions[3] == false && questions[4] == true) {
 			questionText = ('Ваша рабочая среда : 3D');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == true && questions[1] == false && questions[2] == false && questions[3] == false && questions[4] == false) {
 			questionText = ('Ваша рабочая среда : Gamedev');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == false) {
@@ -162,13 +153,13 @@ $(document).ready(function() {
 		if (questions[0] == false && questions[1] == true && questions[2] == true) {
 			questionText = ('Ваша рабочая среда : Design');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == false && questions[1] == true && questions[2] == false  && questions[3] == false) {
 			questionText = ('Ваша рабочая среда : Android');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == false && questions[1] == true && questions[2] == false  && questions[3] == true) {
@@ -181,13 +172,13 @@ $(document).ready(function() {
 		if (questions[0] == false && questions[1] == true && questions[2] == false  && questions[3] == true && questions[4] == true) {
 			questionText = ('Таблица говорит : Front');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == false && questions[1] == true && questions[2] == false  && questions[3] == true && questions[4] == false) {
 			questionText = ('Таблица говорит : Back');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == false && questions[1] == false) {
@@ -210,7 +201,7 @@ $(document).ready(function() {
 		if (questions[0] == false && questions[1] == false && questions[2] == false && questions[3] == false) {
 			questionText = ('Ваша рабочая среда : Android');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == false && questions[1] == false && questions[2] == false && questions[3] == true) {
@@ -223,19 +214,19 @@ $(document).ready(function() {
 		if (questions[0] == false && questions[1] == false && questions[2] == false && questions[3] == true && questions[4] == true) {
 			questionText = ('Таблица говорит : Front');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == false && questions[1] == false && questions[2] == false && questions[3] == true && questions[4] == false) {
 			questionText = ('Таблица говорит : Back');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == false && questions[1] == false && questions[2] == true && questions[3] == true) {
 			questionText = ('Ваша рабочая среда : ML');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == false && questions[1] == false && questions[2] == true && questions[3] == false) {
@@ -248,7 +239,7 @@ $(document).ready(function() {
 		if (questions[0] == false && questions[1] == false && questions[2] == true && questions[3] == false && questions[4] == false) {
 			questionText = ('Ваша рабочая среда : Android');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == false && questions[1] == false && questions[2] == true && questions[3] == false && questions[4] == true) {
@@ -261,12 +252,29 @@ $(document).ready(function() {
 		if (questions[0] == false && questions[1] == false && questions[2] == true && questions[3] == false && questions[4] == true && questions[5] == true ) {
 			questionText = ('Таблица говорит : Front');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
 
 		if (questions[0] == false && questions[1] == false && questions[2] == true && questions[3] == false && questions[4] == true && questions[5] == false) {
 			questionText = ('Таблица говорит : Back');
 			changeText();
-			removeAnswer();
+			removeAnsver();
 		}
+		};
+
+		chengeAnswer();
+		changeText();
+
+		$('.answer-1').click(function(){
+			questions[v] = true ;
+			v = v + 1;
+			checkText();
+		});
+
+		$('.answer-2').click(function(){
+			questions[v] = false;
+			v = v + 1;
+			checkText();
+		});
+
 });
